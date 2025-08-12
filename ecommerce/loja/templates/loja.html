@@ -2,5 +2,13 @@
 {% load static %}
 
 {% block body %}
-   Loja
+ <h3>loja</h3>
+
+<ul>
+    {% for produto in produtos %}
+        <li>{{ produto.nome }}</li>
+        <img src="{{ produto.imagem.url }}" width="300" height="450">
+        <li>{{ produto.preco }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}

@@ -4,5 +4,11 @@
 {% block body %}
 
    <h3>homepage</h3>
+   {% for banner in banners %}
+   <a href="/{{ banner.link_destino }}"> 
+      <img src="{{ banner.imagem.url }}" width="600" height="400">
+   </a>
+
+   {% endfor %}
 
 {% endblock %}
